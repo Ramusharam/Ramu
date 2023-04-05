@@ -1,0 +1,26 @@
+<html>
+<head>
+
+</style>
+  </head>
+  <body>
+       <h1>Temperature Converter</h1>
+	        <h4>Celsius</h4>
+            <input type="number" id="celsius">
+            <h4>Fahrenheit</h4>
+            <input type="number" id="fahrenheit"><br/>    
+<script>
+    let celsius = document.getElementById('celsius');
+    let fahrenheit = document.getElementById('fahrenheit');
+    celsius.oninput = function () {
+        let f = (parseFloat(celsius.value) * 9) / 5 + 32;
+        fahrenheit.value = parseFloat(f.toFixed(2));
+    }
+    fahrenheit.oninput = function () {
+        let c = ((parseFloat(
+            fahrenheit.value) - 32) * 5) / 9;
+        celsius.value = parseFloat(c.toFixed(2));
+    }
+</script>
+</body>
+</html>

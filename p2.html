@@ -1,0 +1,33 @@
+
+<html>
+<head>
+<script>
+    var color = ['green','yellow','red','blue'];
+
+     window.onload = function(){
+        var i = 0;
+        var threadl = setInterval(function(){
+            var img = document.getElementById('color');
+            img.src = "color/"+color[i];
+            i=i+1;
+
+            if(color.length == i){
+                i=0;
+            }
+        },1000);
+    }
+	
+</script>
+<style>
+#div_slider{
+height:560px;
+width:100%;
+border:2px solid black;
+}
+</style>  
+</head>                  
+<body id="div_slider">
+    <img src="ss2.jpg" id="img" height="100%" width="100%"/>
+
+</body>
+</html>

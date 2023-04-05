@@ -1,0 +1,33 @@
+
+<html>
+<head>
+<script>
+    var images = ['ss1.jpeg','s1.jpg','ss2.jpg','s10.png'];
+
+     window.onload = function(){
+        var i = 0;
+        var threadl = setInterval(function(){
+            var img = document.getElementById('img');
+            img.src = "images/"+images[i];
+            i=i+1;
+
+            if(images.length == i){
+                i=0;
+            }
+        },1000);
+    }
+	
+</script>
+<style>
+#div_slider{
+height:560px;
+width:100%;
+border:2px solid black;
+}
+</style>  
+</head>                  
+<body id="div_slider">
+    <img src="ss2.jpg" id="img" height="100%" width="100%"/>
+
+</body>
+</html>
